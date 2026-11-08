@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#06142A" />
+    <meta name="description" content="Nuclearis N1 — firm, carbon-free power, where it is needed. A sealed 17 MWe nuclear capsule, built in a factory and delivered by truck." />
+    <title>Nuclearis N1 · Firm power, where it is needed</title>
+    <link rel="icon" href="./favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32.png" />
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+    <link rel="manifest" href="./site.webmanifest" />
+    <link rel="preload" as="image" href="./media/hero/video-poster.webp" media="(min-width: 768px)" />
+    <link rel="preload" as="image" href="./media/hero/video-poster-movil.webp" media="(max-width: 767px)" />
+    <!-- Pantalla de carga: solo aparece si la carga tarda (entra a los 0,4 s); main.jsx la retira cuando la página está lista -->
+    <style>
+      #carga{position:fixed;inset:0;z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:28px;background:#06142A;opacity:0;transition:opacity .7s;animation:carga-entra .6s .4s forwards}
+      #carga img{width:150px;height:auto}
+      #carga span{position:relative;display:block;width:120px;height:1px;overflow:hidden;background:rgba(232,184,74,.2)}
+      #carga span::after{content:"";position:absolute;inset:0;background:#E8B84A;transform:translateX(-100%);animation:carga-linea 1.6s cubic-bezier(.65,0,.35,1) infinite}
+      @keyframes carga-entra{to{opacity:1}}
+      @keyframes carga-linea{to{transform:translateX(100%)}}
+      @media (prefers-reduced-motion:reduce){#carga span::after{animation:none;transform:none;opacity:.5}}
+    </style>
+    <script type="module" crossorigin src="/assets/index-CmYMxcOa.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-C47j2fa3.css">
+  </head>
+  <body>
+    <div id="carga" aria-hidden="true"><img src="./media/marca/logo-blanco.png" alt="" /><span></span></div>
+    <div id="root"></div>
+  </body>
+</html>
